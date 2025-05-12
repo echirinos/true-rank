@@ -321,6 +321,181 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section
+          id="algorithm"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white border-t"
+        >
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                  Why TrueRank's Algorithm Out-plays the Rest
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                  What Makes Our Ratings Smarter
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Fewer matches to get ranked, ratings that actually reflect
+                  today's form, and clear separation between Men's, Women's, and
+                  Mixed play.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-4xl py-12">
+              <div className="overflow-x-auto mb-12">
+                <table className="min-w-full border text-left text-sm">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="px-4 py-2 font-semibold">What we do</th>
+                      <th className="px-4 py-2 font-semibold">
+                        How it helps you
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Glicko-2 core, not basic Elo
+                        <br />
+                        <span className="text-gray-500">
+                          We track both rating and volatility, updating
+                          confidence after every match.
+                        </span>
+                      </td>
+                      <td className="px-4 py-2">
+                        You reach a stable rating in 6–8 verified matches
+                        instead of 20+.
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Performance-weighted points
+                        <br />
+                        <span className="text-gray-500">
+                          Margin of victory, rally length, and clutch points
+                          carry extra weight.
+                        </span>
+                      </td>
+                      <td className="px-4 py-2">
+                        Close battles nudge your rating; blowouts move it
+                        faster—no more stagnant scores.
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Recency bias that decays smoothly
+                      </td>
+                      <td className="px-4 py-2">
+                        Recent form matters, but a single bad night won't tank
+                        your rating.
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Separate pools for Men's, Women's, and Mixed
+                      </td>
+                      <td className="px-4 py-2">
+                        No cross-inflation—each format reflects its own
+                        competitive landscape.
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Two-captain verification + club imports
+                        <br />
+                        <span className="text-gray-500">
+                          Scores must be confirmed by both teams; leagues upload
+                          nightly CSVs or connect via API.
+                        </span>
+                      </td>
+                      <td className="px-4 py-2">
+                        Cleaner data, zero self-reported fluff, and thousands of
+                        results flowing in from day one.
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2">
+                        Open math & public changelog
+                      </td>
+                      <td className="px-4 py-2">
+                        Every tweak to the formula is logged and explained—no
+                        black boxes.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="overflow-x-auto mb-8">
+                <h3 className="text-2xl font-bold mb-4 text-center">
+                  How TrueRank Compares to DUPR and Elo
+                </h3>
+                <table className="min-w-full border text-left text-sm">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="px-4 py-2 font-semibold">System</th>
+                      <th className="px-4 py-2 font-semibold">Core math</th>
+                      <th className="px-4 py-2 font-semibold">
+                        Key variables they publish
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-4 py-2 font-bold">DUPR</td>
+                      <td className="px-4 py-2">
+                        Proprietary Elo-style model wrapped in a Bayesian
+                        logistic regression. Adjusts win-probability curve after
+                        every update, similar to Glicko, and applies a
+                        post-processing "reliability" weight.
+                      </td>
+                      <td className="px-4 py-2">
+                        • Win/Loss only (latest update removed close-score
+                        bonuses)
+                        <br />• Opponent's current rating
+                        <br />• Your last 30 singles / 60 doubles results
+                        <br />• Reliability Score (how much data you've logged)
+                      </td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-2 font-bold">Plain Elo</td>
+                      <td className="px-4 py-2">
+                        Fixed K-factor; rating moves based solely on
+                        expected-vs-actual result.
+                      </td>
+                      <td className="px-4 py-2">
+                        Win/Loss & opponent rating only
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="mt-4 text-gray-600 text-sm text-center">
+                  DUPR isn't using a brand-new statistical technique—it's a
+                  customized, multi-factor Elo variant that throws everything
+                  (recent results, sample size, margin rules) into a closed
+                  formula. They've never open-sourced the exact coefficients,
+                  but every release note describes tweaks to those weighting
+                  factors rather than a wholesale new algorithm.
+                </p>
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-lg font-semibold mb-4">
+                  Bottom line: fewer matches to get ranked, ratings that
+                  actually reflect today's form, and clear separation between
+                  Men's, Women's, and Mixed play.
+                </p>
+                <Link
+                  href="/signup"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-green-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-700"
+                >
+                  Ready to see a rating that actually makes court assignments
+                  fair?
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-green-600 text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
