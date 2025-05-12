@@ -1,3 +1,5 @@
+![True Rank Logo](public/TrueRankLogo.png)
+
 # True Rank
 
 ## Category-Specific Pickleball Ratings Without the Clutter
