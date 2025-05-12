@@ -1,4 +1,4 @@
-![True Rank Logo](public/TrueRankLogo.png)
+<img src="public/TrueRankLogo.png" alt="True Rank Logo" width="200" />
 
 # True Rank
 
