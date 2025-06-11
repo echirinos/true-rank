@@ -496,6 +496,76 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-green-100 px-3 py-1 text-sm text-green-700">
+                  Built by Experts
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
+                  Created by a Certified DUPR Coach
+                </h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  True Rank was developed by someone who understands the current
+                  rating system's limitations from the inside.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto max-w-2xl py-12">
+              <div className="rounded-xl border bg-white shadow-sm p-8">
+                <div className="flex flex-col items-center space-y-6">
+                  <div className="flex items-center justify-center">
+                    <Image
+                      src="/dupr-coach-logo.png"
+                      alt="DUPR Certified Coach"
+                      width={120}
+                      height={120}
+                      className="rounded-lg"
+                    />
+                  </div>
+                  <div className="text-center space-y-4">
+                    <h3 className="text-2xl font-bold">DUPR Certified Coach</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Having worked extensively with DUPR's rating system as a
+                      certified coach, I've seen firsthand where it falls short.
+                      True Rank addresses these pain points with a more
+                      accurate, transparent, and user-focused approach to
+                      pickleball ratings.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-sm">
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <div className="font-semibold text-green-600">
+                          Deep Understanding
+                        </div>
+                        <div className="text-gray-600">
+                          Years of experience with current rating systems
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <div className="font-semibold text-green-600">
+                          Player-Focused
+                        </div>
+                        <div className="text-gray-600">
+                          Built from a coach's perspective on player needs
+                        </div>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <div className="font-semibold text-green-600">
+                          Proven Expertise
+                        </div>
+                        <div className="text-gray-600">
+                          Certified by the industry's leading rating platform
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-green-600 text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
